@@ -11,22 +11,22 @@
 
 html调用：
 
-<a href="#" class="btn" onclick="scanCode();">Scan Code</a>
-<script type="text/javascript">
-function scanCode() {
-    cordova.plugins.barcodeScanner.scan(
-      function (result) {
-          alert("We got a barcode\n" +
-                "Result: " + result.text + "\n" +
-                "Format: " + result.format + "\n" +
-                "Cancelled: " + result.cancelled);
-      }, 
-      function (error) {
-          alert("Scanning failed: " + error);
-      }
-   );
-}
-</script>
+<a href="#" class="btn" onclick="scanCode();">Scan Code</a>  
+<script type="text/javascript">  
+function scanCode() {  
+    cordova.plugins.barcodeScanner.scan(  
+      function (result) {  
+          alert("We got a barcode\n" +  
+                "Result: " + result.text + "\n" +  
+                "Format: " + result.format + "\n" +  
+                "Cancelled: " + result.cancelled);  
+      },   
+      function (error) {  
+          alert("Scanning failed: " + error);  
+      }  
+   );  
+}  
+</script>  
 
 # PhoneGap Plugin BarcodeScanner
 ================================
