@@ -1,3 +1,33 @@
+1 安装插件： cordova plugin add https://github.com/wildabeast/BarcodeScanner.git
+
+ 
+
+2 插件引用：  js   中包含：
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova_plugins.js"></script>
+
+ 
+
+html调用：
+
+<a href="#" class="btn" onclick="scanCode();">Scan Code</a>
+<script type="text/javascript">
+function scanCode() {
+    cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
+}
+</script>
+
 # PhoneGap Plugin BarcodeScanner
 ================================
 
